@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faire un don — Fondation Bien-Être, Inclusion &amp; Protection</title>
+  <meta name="description" content="Soutenez la Fondation Bien-Être, Inclusion & Protection par MonCash, NatCash ou virement bancaire.">
+  <style>
+    :root{
+      --navy:#0d1b2a; --navy-2:#14283c; --gold:#d4af37; --gold-soft:#f6efd6;
+      --bg:#f6f7f9; --panel:#fff; --text:#1a1f2b; --muted:#5f6b7a; --border:#e1e5ea;
+      --ok:#1b5e20; --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:var(--navy-2)}
+    .top{background:var(--navy);color:#fff;padding:14px 20px}
+    .top .in{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:10px;font-weight:700}
+    .top .logo{color:var(--gold)}
+    .wrap{max-width:860px;margin:0 auto;padding:0 16px 48px}
+    .hero{padding:36px 0 12px}
+    .hero h1{font-size:clamp(1.7rem,4vw,2.3rem);color:var(--navy);margin:0 0 10px;line-height:1.2}
+    .hero p{font-size:1.05rem;color:var(--muted);margin:0;max-width:62ch}
+    .bar{height:4px;width:64px;background:var(--gold);border-radius:2px;margin:16px 0 0}
+    h2{color:var(--navy);margin:34px 0 12px;font-size:1.3rem}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+    .tabs button{font:inherit;cursor:pointer;padding:10px 16px;border-radius:999px;border:1px solid var(--border);background:var(--panel);color:var(--navy-2);font-weight:600}
+    .tabs button[aria-selected="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+    .tabs button:focus-visible,.copy:focus-visible,.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+    .panel{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px}
+    .panel[hidden]{display:none}
+    .panel h3{margin:0 0 6px;color:var(--navy)}
+    ol{padding-left:20px;margin:10px 0}
+    li{margin:6px 0}
+    .box{background:var(--gold-soft);border-left:4px solid var(--gold);border-radius:8px;padding:12px 14px;margin:12px 0}
+    .row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 0;border-bottom:1px dashed var(--border)}
+    .row:last-child{border-bottom:0}
+    .row .k{color:var(--muted);font-size:.92rem}
+    .row .v{font-weight:700;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+    .copy{font:inherit;font-size:.85rem;cursor:pointer;padding:4px 12px;border-radius:999px;border:1px solid var(--navy-2);background:transparent;color:var(--navy-2)}
+    .copy:hover{background:var(--navy-2);color:#fff}
+    .todo{background:#fff3cd;padding:0 4px;border-radius:4px}
+    form{display:grid;gap:14px}
+    label{display:grid;gap:5px;font-weight:600;color:var(--navy)}
+    label span.opt{font-weight:400;color:var(--muted)}
+    input,select,textarea{font:inherit;padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--text);width:100%}
+    textarea{min-height:90px;resize:vertical}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .btn{font:inherit;font-weight:700;cursor:pointer;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:12px 24px;justify-self:start}
+    .btn:hover{background:var(--navy-2)}
+    .trust ul{margin:0;padding-left:20px}
+    .foot{background:var(--navy);color:#cfd6df;padding:26px 20px;margin-top:40px;font-size:.93rem}
+    .foot .in{max-width:860px;margin:0 auto}
+    .foot a{color:var(--gold)}
+    @media(max-width:560px){.two{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<header class="top"><div class="in"><span class="logo">◆</span> <a href="/index.html" style="color:#fff;text-decoration:none">Fondation Bien-Être, Inclusion &amp; Protection</a><a href="/index.html" style="color:#e8edf3;text-decoration:none;margin-left:auto;font-weight:400;font-size:.93rem">← Accueil</a></div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Faire un don</h1>
+    <p>Votre don soutient directement les actions de la Fondation en faveur du bien-être, de l'inclusion et de la protection des personnes. Chaque contribution compte, quel que soit le montant.</p>
+    <div class="bar"></div>
+  </section>
+
+  <h2>1. Choisissez votre moyen de paiement</h2>
+  <div class="tabs" role="tablist" aria-label="Moyens de paiement">
+    <button role="tab" id="t-moncash" aria-controls="p-moncash" aria-selected="true">MonCash</button>
+    <button role="tab" id="t-natcash" aria-controls="p-natcash" aria-selected="false">NatCash</button>
+    <button role="tab" id="t-virement" aria-controls="p-virement" aria-selected="false">Virement bancaire</button>
+  </div>
+
+  <div class="panel" role="tabpanel" id="p-moncash" aria-labelledby="t-moncash">
+    <h3>Don par MonCash</h3>
+    <ol>
+      <li>Ouvrez l'application MonCash et choisissez « Envoyer de l'argent ».</li>
+      <li>Envoyez votre don au numéro ci-dessous.</li>
+      <li>Indiquez en référence : <strong>DON + votre nom</strong>.</li>
+      <li>Remplissez le formulaire de confirmation plus bas.</li>
+    </ol>
+    <div class="row"><div><div class="k">Numéro MonCash</div><div class="v"><span class="todo" id="n-moncash">[NUMÉRO MONCASH]</span></div></div><button class="copy" data-copy="n-moncash">Copier</button></div>
+    <div class="row"><div><div class="k">Nom du compte</div><div class="v"><span class="todo">[NOM DU TITULAIRE]</span></div></div></div>
+  </div>
+
+  <div class="panel" role="tabpanel" id="p-natcash" aria-labelledby="t-natcash" hidden>
+    <h3>Don par NatCash</h3>
+    <ol>
+      <li>Ouvrez l'application NatCash et choisissez « Envoyer de l'argent ».</li>
+      <li>Envoyez votre don au numéro ci-dessous.</li>
+      <li>Indiquez en référence : <strong>DON + votre nom</strong>.</li>
+      <li>Remplissez le formulaire de confirmation plus bas.</li>
+    </ol>
+    <div class="row"><div><div class="k">Numéro NatCash</div><div class="v"><span class="todo" id="n-natcash">[NUMÉRO NATCASH]</span></div></div><button class="copy" data-copy="n-natcash">Copier</button></div>
+    <div class="row"><div><div class="k">Nom du compte</div><div class="v"><span class="todo">[NOM DU TITULAIRE]</span></div></div></div>
+  </div>
+
+  <div class="panel" role="tabpanel" id="p-virement" aria-labelledby="t-virement" hidden>
+    <h3>Don par virement bancaire</h3>
+    <ol>
+      <li>Effectuez un virement vers le compte ci-dessous.</li>
+      <li>Indiquez en référence : <strong>DON + votre nom</strong>.</li>
+      <li>Conservez votre reçu de dépôt ou de virement.</li>
+      <li>Remplissez le formulaire de confirmation plus bas.</li>
+    </ol>
+    <div class="row"><div><div class="k">Bénéficiaire</div><div class="v">Fondation Bien-Être, Inclusion &amp; Protection</div></div></div>
+    <div class="row"><div><div class="k">Banque</div><div class="v"><span class="todo">[NOM DE LA BANQUE]</span></div></div></div>
+    <div class="row"><div><div class="k">Numéro de compte</div><div class="v"><span class="todo" id="n-compte">[NUMÉRO DE COMPTE]</span></div></div><button class="copy" data-copy="n-compte">Copier</button></div>
+    <div class="row"><div><div class="k">Devise</div><div class="v"><span class="todo">[HTG et/ou USD]</span></div></div></div>
+  </div>
+
+  <h2>2. Confirmez votre don</h2>
+  <div class="panel">
+    <p style="margin-top:0">Après votre paiement, envoyez-nous ce court formulaire. Il nous permet de retrouver votre don et de vous remercier. Ne nous communiquez jamais de mot de passe ni de code secret.</p>
+    <form name="don" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="don">
+      <p style="display:none"><label>Ne pas remplir : <input name="bot-field"></label></p>
+      <div class="two">
+        <label>Nom complet <input type="text" name="nom" required autocomplete="name"></label>
+        <label>E-mail <input type="email" name="email" required autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Moyen de paiement
+          <select name="mode_de_paiement" required>
+            <option value="" disabled selected>Choisir…</option>
+            <option>MonCash</option><option>NatCash</option><option>Virement bancaire</option>
+          </select>
+        </label>
+        <label>Montant et devise <input type="text" name="montant" required placeholder="ex. 2 000 HTG ou 25 USD"></label>
+      </div>
+      <label>Référence ou numéro de transaction <span class="opt">(facultatif)</span> <input type="text" name="reference"></label>
+      <label>Message <span class="opt">(facultatif)</span> <textarea name="message"></textarea></label>
+      <button class="btn" type="submit">Envoyer ma confirmation</button>
+    </form>
+  </div>
+
+  <h2>Transparence</h2>
+  <div class="panel trust">
+    <ul>
+      <li>Nous accusons réception de chaque don par e-mail ou WhatsApp.</li>
+      <li>Vérifiez toujours le numéro et le nom du compte avant d'envoyer votre paiement.</li>
+      <li>Pour toute question, contactez-nous : <a href="mailto:jacquesjessica4@gmail.com">jacquesjessica4@gmail.com</a> ou <a href="https://wa.me/50942935491">+509 4293 5491</a>.</li>
+    </ul>
+  </div>
+</main>
+
+<footer class="foot"><div class="in">
+  <strong>Fondation Bien-Être, Inclusion &amp; Protection</strong><br>
+  <a href="mailto:jacquesjessica4@gmail.com">jacquesjessica4@gmail.com</a> · Tél. <a href="tel:+50942935491">+509 4293 5491</a>
+</div></footer>
+
+<script>
+  // Onglets
+  const tabs=[...document.querySelectorAll('[role=tab]')];
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>{x.setAttribute('aria-selected',x===t);document.getElementById(x.getAttribute('aria-controls')).hidden=x!==t;});
+  }));
+  // Copier
+  document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',async()=>{
+    const txt=document.getElementById(b.dataset.copy).textContent.trim();
+    try{await navigator.clipboard.writeText(txt);b.textContent='Copié ✓';}catch(_){b.textContent='Sélectionnez le texte';}
+    setTimeout(()=>b.textContent='Copier',1800);
+  }));
+</script>
+</body>
+</html>
